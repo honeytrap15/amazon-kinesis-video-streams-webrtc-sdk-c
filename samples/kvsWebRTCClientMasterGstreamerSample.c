@@ -2,6 +2,8 @@
 #include <gst/gst.h>
 #include <gst/app/gstappsink.h>
 
+#define SERVO_PIN 18
+
 extern PSampleConfiguration gSampleConfiguration;
 
 // #define VERBOSE
