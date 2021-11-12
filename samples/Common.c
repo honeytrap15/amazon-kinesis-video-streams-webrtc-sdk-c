@@ -653,11 +653,11 @@ STATUS createSampleConfiguration(PCHAR channelName, SIGNALING_CHANNEL_ROLE_TYPE 
 
     // Use IoT Credential Provider instead of static credentials
     CHK_STATUS(createLwsIotCredentialProvider(
-        pIoTCredentialsEndpoint,  // IoT credentials endpoint
-        "/home/pi/amazon-kinesis-video-streams-webrtc-sdk-c/build/certificate.pem.crt",  // path to iot certificate
-        "/home/pi/amazon-kinesis-video-streams-webrtc-sdk-c/build/private.pem.key", // path to iot private key
-        "/home/pi/amazon-kinesis-video-streams-webrtc-sdk-c/build/AmazonRootCA1.pem", // path to CA cert
-        "RasPiKVSWebRTCRoleAlias", // IoT role alias
+        pIoTCredentialsEndpoint,   // IoT credentials endpoint
+        CERT_FILE,  // path to iot certificate
+        KEY_FILE,  // path to iot private key
+        CA_FILE,      // path to CA cert
+        ROLE_ALIAS, // IoT role alias
         channelName, // iot thing name, recommended to be same as your channel name
         &pSampleConfiguration->pCredentialProvider));
 

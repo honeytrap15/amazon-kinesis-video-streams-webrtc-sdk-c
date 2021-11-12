@@ -11,3 +11,5 @@ outputs
 tags
 CMakeLists.txt.user
 .cache
+certs
+*Cache_*

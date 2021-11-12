@@ -37,6 +37,11 @@ extern "C" {
 #define SAMPLE_HASH_TABLE_BUCKET_COUNT  50
 #define SAMPLE_HASH_TABLE_BUCKET_LENGTH 2
 
+#define CERT_FILE "./certs/device.pem.crt"
+#define KEY_FILE  "./certs/device.pem.key"
+#define CA_FILE "./certs/rootCA.pem"
+#define ROLE_ALIAS "DeviceRoleAlias"
+
 typedef enum {
     SAMPLE_STREAMING_VIDEO_ONLY,
     SAMPLE_STREAMING_AUDIO_VIDEO,
