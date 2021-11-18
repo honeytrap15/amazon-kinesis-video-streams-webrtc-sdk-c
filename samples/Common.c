@@ -954,6 +954,7 @@ STATUS sessionCleanupWait(PSampleConfiguration pSampleConfiguration)
     CHK(pSampleConfiguration != NULL, STATUS_NULL_ARG);
 
     while (!ATOMIC_LOAD_BOOL(&pSampleConfiguration->interrupted)) {
+
         // Keep the main set of operations interlocked until cvar wait which would atomically unlock
         MUTEX_LOCK(pSampleConfiguration->sampleConfigurationObjLock);
         locked = TRUE;
